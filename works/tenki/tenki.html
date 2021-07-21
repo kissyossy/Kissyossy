@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style/style2.css" />
+    <script src="../../js/jquery-3.5.1.min.js"></script>
+
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="navToggle">
+      <span></span><span></span><span></span><span></span>
+    </div>
+
+    <nav class="globalMenuSp">
+      <div class="globalMenuSpInner">
+        <ul>
+          <li><a href="../../index.html">HOME</a></li>
+          <li><a href="../../profile.html">PROFILE</a></li>
+          <li><a href="../../work.html">WORK</a></li>
+          <li><a href="../../blog.html">BLOG</a></li>
+          <li><a href="../../contact.html">CONTACT</a></li>
+        </ul>
+        <ul class="bl_snsListSide">
+          <li class="bl_snsListSide_li">
+            <a
+              href="https://twitter.com/kissyossy6"
+              target="_blank"
+              class="hover"
+              ><img src="../../mainimg/twitter.jpg" alt="Instagram"
+            /></a>
+          </li>
+          <li class="bl_snsListSide_li">
+            <a
+              href="https://www.instagram.com/kissyossynsta/?hl=ja"
+              target="_blank"
+              class="hover"
+              ><img src="../../mainimg/insta.jpg" alt="Twitter"
+            /></a>
+          </li>
+          <li class="bl_snsListSide_li">
+            <a
+              href="https://www.youtube.com/channel/UCUwU0VfGrhsS5lnOrbsnCFg"
+              target="_blank"
+              class="hover"
+              ><img src="../../mainimg/youtube.jpg" alt="Youtube"
+            /></a>
+          </li>
+          <li class="bl_snsListSide_li">
+            <a href="https://github.com/kissyossy" target="_blank" class="hover"
+              ><img src="../../mainimg/github.jpg" alt="Github"
+            /></a>
+          </li>
+          <li class="bl_snsListSide_li"><a href="https://cluster.mu/u/kissyossy6" target="_blank" class="hover"><img src="../../mainimg/cluster.jpg" alt="Cluster"></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="wrapper">
+      <div class="container">
+        <div class="header-main">
+          <div class="introall">
+            <div class="intro">
+              <h1 class="profile">Weather</h1>
+            </div>
+            <div class="profiles">
+              <ul class="ul2">
+                <li>
+                  <a class="pro">GENRE：Weather forecast</a>
+                </li>
+                <li>
+                  <a class="pro">USE：Processing, Arduino</a>
+                </li>
+                <li>
+                  <a class="pro">WHEN：FRESHMAN</a>
+                </li>
+                <li>
+                  <a class="pro">MEMBER：GROUP</a>
+                </li>
+                <li>
+                  <a class="pro">PRESENTATION：P(Ⅱ)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header-sidetenki"></div>
+      </div>
+      <div class="maintenki">
+        <!-- <div class="workall"> -->
+        <div class="worktitle">
+          <a class="wtitle">天気予報シミュレーション</a>
+          <a
+            href="https://twitter.com/HomeiMiyashita/status/1219224868014526464?s=20"
+            target="_blank"
+            class="hover"
+            ><img class="icon" src="../../mainimg/twitter.jpg" alt="Twitter"
+          /></a>
+          <div class="kuhaku"></div>
+          <div class="kuhaku"></div>
+          <div class="worktext">
+            <div class="wtext">
+              天気予報の模倣。P演習Ⅱで制作した作品。
+              画面右側には現在の日付と、Arudinoの温度センサで取得した現在の室温を表示する。
+              画面左側は全国14ヶ所の地域の今日の天気と最高気温、最低気温を表示する。
+              ウェザーハックスというWebAPIのサービスを利用して、各地の今日の天気予報の情報を取得し、実際のニュースのように表示する。
+              また、各地の天気が表示されているところはボタンとなっていて、クリックするとロボットが現れ、その箇所の天気予報を読み上げる。
+            </div>
+          </div>
+          <div class="kuhaku"></div>
+          <div class="kuhaku"></div>
+          <div class="imgcon">
+            <img class="workimg" src="tenki.jpg" alt="" />
+          </div>
+          <div class="imgcoment">
+            <p class="icoment">実行画面</p>
+          </div>
+          <div class="kuhaku"></div>
+          <div class="kuhaku"></div>
+          <div class="worktext">
+            <div class="hitokoto">担当</div>
+            <div class="wtext">
+                使用する音声の作成。空みたいな動く背景の実装。
+            </div>
+          </div>
+          <div class="kuhaku"></div>
+          <div class="kuhaku"></div>
+          <div class="worktext">
+            <div class="hitokoto">ちょっとひとこと</div>
+            <div class="wtext">ロボットの声は僕の声を加工したもの。</div>
+          </div>
+          <!-- </div> -->
+          <div class="kuhaku"></div>
+        </div>
+        <div class="fot cpr">Copyright © by Kissyossy 2021</div>
+      </div>
+    </div>
+
+    <script>
+      $(function () {
+        $(".navToggle").click(function () {
+          $(this).toggleClass("active");
+
+          if ($(this).hasClass("active")) {
+            $(".globalMenuSp").addClass("active");
+          } else {
+            $(".globalMenuSp").removeClass("active");
+          }
+        });
+        $("nav.globalMenuSp a").click(function () {
+          $(".navToggle").removeClass("active");
+          $(".globalMenuSp").removeClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
